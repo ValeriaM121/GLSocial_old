@@ -4,7 +4,17 @@ import { Link, router, Stack } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function Search(){
-    const styles = StyleSheet.create({
+
+    return(
+        <SafeAreaView style={styles.safeArea}>
+            <ScrollView contentContainerStyle = {styles.container}>
+                <Text> This is user search page!</Text>
+            </ScrollView>
+        </SafeAreaView>
+    )
+}
+
+const styles = StyleSheet.create({
         safeArea:{
             flex: 1,
             backgroundColor: '#1E2128FF'
@@ -19,12 +29,3 @@ export default function Search(){
             paddingHorizontal: 20
         }
     })
-
-    return(
-        <SafeAreaView style={styles.safeArea}>
-            <ScrollView contentContainerStyle = {styles.container}>
-                <Text> This is user search page!</Text>
-            </ScrollView>
-        </SafeAreaView>
-    )
-}

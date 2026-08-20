@@ -6,45 +6,6 @@ import {validateUsername} from "@/utils/validateUsername";
 import { BackendCalls } from '@/utils/backendCalls';
 
 export default function GoogleUsername(){
-    const styles = StyleSheet.create({
-        safeArea:{
-            flex: 1,
-            backgroundColor: '#1E2128FF'
-        },
-        container:{
-            flexGrow: 1,
-            justifyContent: 'center',
-            gap: 30,
-            width: '100%',
-            paddingTop: 12,
-            paddingBottom: 24,
-            paddingHorizontal: 20
-        },
-        box:{
-            gap: 10,
-            backgroundColor: 'rgb(58, 62, 75)',
-            padding: 20,
-            borderRadius: 10
-
-        },
-        nextButton:{
-            backgroundColor: '#636AE8FF',
-            borderRadius: 25,
-            height: 45,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '30%'
-        },
-        textBox:{
-            height: 40,
-            borderColor: '#f1f2f5',
-            backgroundColor: '#f1f2f5',
-            borderRadius: 15,
-            padding: 10
-        }
-    });
-
     const[username, setUsername] = useState<string>("");
     const [errorMessage, setErrorMessage] = useState<string>("");
 
@@ -96,3 +57,41 @@ export default function GoogleUsername(){
         </SafeAreaView>
     )
 }
+const styles = StyleSheet.create({
+        safeArea:{
+            flex: 1,
+            backgroundColor: '#1E2128FF'
+        },
+        container:{
+            flexGrow: 1,
+            justifyContent: 'center',
+            gap: 30,
+            width: '100%',
+            paddingTop: 12,
+            paddingBottom: 24,
+            paddingHorizontal: 20
+        },
+        box:{
+            gap: 10,
+            backgroundColor: 'rgb(58, 62, 75)',
+            padding: 20,
+            borderRadius: 10
+
+        },
+        nextButton:{
+            backgroundColor: '#636AE8FF',
+            borderRadius: 25,
+            height: 45,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '30%'
+        },
+        textBox:{
+            height: 40,
+            borderColor: '#f1f2f5',
+            backgroundColor: '#f1f2f5',
+            borderRadius: 15,
+            padding: 10
+        }
+    });

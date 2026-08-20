@@ -5,74 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { BackendCalls } from '@/utils/backendCalls';
 
 export default function quizContent(){
-    const styles = StyleSheet.create({
-        safeArea:{
-            flex: 1,
-            backgroundColor: '#1E2128FF'
-        },
-        container:{
-            flexGrow: 1,
-            justifyContent: 'flex-start',
-            flexDirection: 'column',
-            gap: 30,
-            width: '100%',
-            paddingTop: 12,
-            paddingBottom: 24,
-            paddingHorizontal: 20
-        },
-        nextButton:{
-            backgroundColor: '#636AE8FF',
-            borderRadius: 25,
-            height: 45,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '30%'
-        },
-        showGrid:{
-            flexWrap: 'wrap',
-            flexDirection: 'row',
-            justifyContent: 'flex-start',
-            rowGap: 5,
-            columnGap: 15
-        },
-        showCard:{
-            width: '30%',
-            marginBottom: 5,
-            gap:5,
-            alignItems: 'center'
-        },
-        poster:{
-            width:'100%',
-            aspectRatio: 0.65,
-            borderRadius: 12,
-            backgroundColor: '#1E2128FF'
-        },
-        clickedPoster:{
-            width:'100%',
-            aspectRatio: 0.65,
-            borderRadius: 12,
-            borderWidth: 3,
-            borderColor: '#636AE8FF',
-            overflow: 'hidden'
-        },
-        disabledNextButton:{
-            backgroundColor: 'rgb(125, 131, 247)',
-            borderRadius: 25,
-            height: 45,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '30%'
-        }
-    });
-
-    type Show ={
-        id: string,
-        title: string,
-        originalTitle: string,
-        posterURL: string | null
-    }
+    
     type onBoarding={
         active: boolean,
         id: string,
@@ -206,3 +139,72 @@ export default function quizContent(){
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+        safeArea:{
+            flex: 1,
+            backgroundColor: '#1E2128FF'
+        },
+        container:{
+            flexGrow: 1,
+            justifyContent: 'flex-start',
+            flexDirection: 'column',
+            gap: 30,
+            width: '100%',
+            paddingTop: 12,
+            paddingBottom: 24,
+            paddingHorizontal: 20
+        },
+        nextButton:{
+            backgroundColor: '#636AE8FF',
+            borderRadius: 25,
+            height: 45,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '30%'
+        },
+        showGrid:{
+            flexWrap: 'wrap',
+            flexDirection: 'row',
+            justifyContent: 'flex-start',
+            rowGap: 5,
+            columnGap: 15
+        },
+        showCard:{
+            width: '30%',
+            marginBottom: 5,
+            gap:5,
+            alignItems: 'center'
+        },
+        poster:{
+            width:'100%',
+            aspectRatio: 0.65,
+            borderRadius: 12,
+            backgroundColor: '#1E2128FF'
+        },
+        clickedPoster:{
+            width:'100%',
+            aspectRatio: 0.65,
+            borderRadius: 12,
+            borderWidth: 3,
+            borderColor: '#636AE8FF',
+            overflow: 'hidden'
+        },
+        disabledNextButton:{
+            backgroundColor: 'rgb(125, 131, 247)',
+            borderRadius: 25,
+            height: 45,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '30%'
+        }
+    });
+
+    type Show ={
+        id: string,
+        title: string,
+        originalTitle: string,
+        posterURL: string | null
+    }

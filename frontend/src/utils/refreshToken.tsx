@@ -17,7 +17,14 @@ import * as Device from 'expo-device';
  * @returns a new access token and a new Refresh Token
  */
 
-export const RefreshToken = async()=>{
+type RefreshResult = {
+    newToken: string | null;
+    newRefreshToken: string | null;
+};
+
+let refreshPromise: Promise<RefreshResult | null> | null = null;
+
+const refreshToken = async(): Promise<RefreshResult | null> => {
     const baseURL = process.env.EXPO_PUBLIC_API_URL;
     const refreshToken = await SecureStore.getItemAsync('refreshToken');
     if(!refreshToken){
@@ -33,7 +40,7 @@ export const RefreshToken = async()=>{
             credentials: "include",
             body: JSON.stringify({
                 refreshToken: refreshToken,
-                deviceName: Device.deviceName
+                deviceName: Device.deviceName ?? "Unknown-device"
             })
         });
         const data = await response.json();
@@ -44,6 +51,7 @@ export const RefreshToken = async()=>{
             return null;
         };
         
+        console.log('Token Refreshed!');
         await SecureStore.setItemAsync('token', data.token);
         await SecureStore.setItemAsync('refreshToken', data.refreshToken);
             
@@ -56,5 +64,14 @@ export const RefreshToken = async()=>{
         await Logout();
         return null;
     }
-    
+};
+
+export const RefreshToken = (): Promise<RefreshResult | null> => {
+    if(!refreshPromise){
+        refreshPromise = refreshToken().finally(() => {
+            refreshPromise = null;
+        });
+    }
+
+    return refreshPromise;
 }

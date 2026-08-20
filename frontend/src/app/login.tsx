@@ -9,55 +9,6 @@ import { validateLogin } from "../utils/validateLogin"
 import * as Device from 'expo-device';
 
 export default function Login(){
-    const styles = StyleSheet.create({
-        safeArea:{
-            flex: 1,
-            backgroundColor: '#1E2128FF',
-        },
-        container:{
-            flexGrow: 1,
-            justifyContent: 'space-between',
-            gap: 30,
-            width: '100%',
-            paddingTop: 12,
-            paddingBottom: 24,
-            paddingHorizontal: 20
-        },
-        textBox:{
-            flex: 1,
-            justifyContent: 'flex-start',
-            height: 40,
-            borderColor: '#f1f2f5',
-            backgroundColor: '#f1f2f5',
-            borderRadius: 15,
-            padding: 10
-        },
-        signInButton:{
-            backgroundColor: '#636AE8FF',
-            borderRadius: 25,
-            height: 40,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-        },
-        showPass:{
-            flexDirection: 'row',
-            alignItems: 'center',
-            borderColor: '#f1f2f5',
-            borderRadius: 15,
-            backgroundColor: '#f1f2f5',
-            paddingRight : 10
-        },
-        loggingInButton:{
-            backgroundColor: 'rgb(95, 101, 199)',
-            borderRadius: 25,
-            height: 40,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-        }
-
-    })
     type formtype = {email: string, password: string};
     const[loginForm, setLoginForm] = useState<formtype>({
         email: '',
@@ -289,3 +240,53 @@ export default function Login(){
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+        safeArea:{
+            flex: 1,
+            backgroundColor: '#1E2128FF',
+        },
+        container:{
+            flexGrow: 1,
+            justifyContent: 'space-between',
+            gap: 30,
+            width: '100%',
+            paddingTop: 12,
+            paddingBottom: 24,
+            paddingHorizontal: 20
+        },
+        textBox:{
+            flex: 1,
+            justifyContent: 'flex-start',
+            height: 40,
+            borderColor: '#f1f2f5',
+            backgroundColor: '#f1f2f5',
+            borderRadius: 15,
+            padding: 10
+        },
+        signInButton:{
+            backgroundColor: '#636AE8FF',
+            borderRadius: 25,
+            height: 40,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+        showPass:{
+            flexDirection: 'row',
+            alignItems: 'center',
+            borderColor: '#f1f2f5',
+            borderRadius: 15,
+            backgroundColor: '#f1f2f5',
+            paddingRight : 10
+        },
+        loggingInButton:{
+            backgroundColor: 'rgb(95, 101, 199)',
+            borderRadius: 25,
+            height: 40,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }
+
+    })

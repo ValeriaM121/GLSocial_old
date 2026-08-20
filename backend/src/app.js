@@ -5,6 +5,7 @@ import userRoutes from "./routes/user.route.js"
 import userInfoRoutes from "./routes/userInfo.route.js"
 import onBoardingRoutes from "./routes/onBoarding.route.js"
 import watchListShowRoutes from "./routes/watchListShow.route.js"
+import postRoutes from "./routes/post.route.js"
 //import userRoutesExample from "./routes/userInfo.route.js"
 
 const app = express();
@@ -29,5 +30,6 @@ app.use("/auth", userRoutes);
 app.use("/userInfo", userInfoRoutes);
 app.use("/onBoarding",onBoardingRoutes);
 app.use("/watchListShow", watchListShowRoutes);
+app.use("/posts", postRoutes);
 
 export default app;

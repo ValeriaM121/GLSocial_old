@@ -32,6 +32,8 @@ model User{
   passwordResetTokens PasswordResetToken[]
 
   refreshTokens RefreshToken[]
+
+  posts Post[]
 }
 
 model RefreshToken{
@@ -86,6 +88,8 @@ model Show{
   watchlistShowsItems WatchlistShowsItem[]
 
   onboardingShows OnboardingShow[]
+
+  posts Post[]
 }
 
 model OnboardingShow{
@@ -109,6 +113,8 @@ model Movies{
   createdAt     DateTime @default(now())
 
   watchlistMoviesItems WatchlistMoviesItem[]
+
+  posts Post[]
 }
 
 enum WatchlistStatus {
@@ -146,4 +152,19 @@ model WatchlistMoviesItem{
 
   user User @relation(fields: [userID], references: [id], onDelete: Cascade)
   show Movies @relation(fields: [movieID], references: [id], onDelete: Cascade )
+}
+
+model Post{
+  id        String @id @default(uuid())
+  userId    String
+  showId    String?
+  movieId   String?
+  content   String
+  spoiler   Boolean @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  show  Show? @relation(fields: [showId], references: [id])
+  movie Movies? @relation(fields: [movieId], references: [id])
 }

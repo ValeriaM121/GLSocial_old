@@ -6,29 +6,7 @@ import * as SecureStore from "expo-secure-store"
 import { Logout} from "@/utils/logout"
 
 export default function Setting(){
-    const styles = StyleSheet.create({
-        safeArea:{
-            flex: 1,
-            backgroundColor: '#1E2128FF'
-        },
-        container:{
-            flexGrow: 1,
-            justifyContent: 'space-between',
-            gap: 30,
-            width: '100%',
-            paddingTop: 12,
-            paddingBottom: 24,
-            paddingHorizontal: 20
-        },
-        logoutButton: {
-            backgroundColor: '#636AE8FF',
-            borderRadius: 25,
-            height: 40,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-        }
-    });
+    
     const [token, setToken] = useState<String>("");
     
     /*useEffect(()=>{
@@ -59,3 +37,27 @@ export default function Setting(){
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+        safeArea:{
+            flex: 1,
+            backgroundColor: '#1E2128FF'
+        },
+        container:{
+            flexGrow: 1,
+            justifyContent: 'space-between',
+            gap: 30,
+            width: '100%',
+            paddingTop: 12,
+            paddingBottom: 24,
+            paddingHorizontal: 20
+        },
+        logoutButton: {
+            backgroundColor: '#636AE8FF',
+            borderRadius: 25,
+            height: 40,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }
+    });

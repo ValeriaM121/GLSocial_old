@@ -6,53 +6,6 @@ import Ionicons from '@react-native-vector-icons/ionicons';
 import { ChangePasswordValidation } from "@/utils/validateChangePassword"
 
 export default function ChangePassword(){
-    const styles = StyleSheet.create({
-        safeArea:{
-            flex: 1,
-            backgroundColor: '#1E2128FF',
-        },
-        container:{
-            flexGrow: 1,
-            gap: 30,
-            width: '100%',
-            paddingTop: 12,
-            paddingBottom: 24,
-            paddingHorizontal: 20
-        },
-        textBox:{
-            flex:1,
-            justifyContent: 'flex-start',
-            height: 40,
-            borderColor: '#f1f2f5',
-            backgroundColor: '#f1f2f5',
-            borderRadius: 15,
-            padding: 10
-        },
-        sendButton:{
-            backgroundColor: '#636AE8FF',
-            borderRadius: 25,
-            height: 40,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-        },
-        loadingButton:{
-            backgroundColor: 'rgb(95, 101, 199)',
-            borderRadius: 25,
-            height: 40,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-        },
-        showPass:{
-            flexDirection: 'row',
-            alignItems: 'center',
-            borderColor: '#f1f2f5',
-            borderRadius: 15,
-            backgroundColor: '#f1f2f5',
-            paddingRight : 10
-        },
-    });
 
     type passwordType = {password: string, confirmPassword:string};
     const[ passwordForm, setPasswordForm] = useState<passwordType>({
@@ -182,3 +135,51 @@ export default function ChangePassword(){
     )
 
 }
+
+const styles = StyleSheet.create({
+        safeArea:{
+            flex: 1,
+            backgroundColor: '#1E2128FF',
+        },
+        container:{
+            flexGrow: 1,
+            gap: 30,
+            width: '100%',
+            paddingTop: 12,
+            paddingBottom: 24,
+            paddingHorizontal: 20
+        },
+        textBox:{
+            flex:1,
+            justifyContent: 'flex-start',
+            height: 40,
+            borderColor: '#f1f2f5',
+            backgroundColor: '#f1f2f5',
+            borderRadius: 15,
+            padding: 10
+        },
+        sendButton:{
+            backgroundColor: '#636AE8FF',
+            borderRadius: 25,
+            height: 40,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+        loadingButton:{
+            backgroundColor: 'rgb(95, 101, 199)',
+            borderRadius: 25,
+            height: 40,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+        showPass:{
+            flexDirection: 'row',
+            alignItems: 'center',
+            borderColor: '#f1f2f5',
+            borderRadius: 15,
+            backgroundColor: '#f1f2f5',
+            paddingRight : 10
+        },
+    });
