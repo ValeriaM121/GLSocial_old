@@ -190,11 +190,21 @@ const updateOnboarding = async(req,res) =>{
     }
 }
 
+const getAvatar = async(req,res)=>{
+    try {
+        return res.status(200).json({message: "Success in getting avatar", avatar: req.user.avatar});
+    } catch (error) {
+        console.error(`Failed getting avatar: ${error}`);
+        return res.status(500).json({message: "Internal server error. Please try again later."});
+    }
+}
+
 export {
     getUsername,
     updateUsername,
     getEmail,
     updateEmail,
     updatePassword,
-    updateOnboarding
+    updateOnboarding,
+    getAvatar
 }

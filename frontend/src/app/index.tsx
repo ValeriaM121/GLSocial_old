@@ -29,7 +29,7 @@ export default function Index(){
 }
 const styles = StyleSheet.create({
     container:{
-      flex: 1,
+      flex:1,
       flexDirection: 'column',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
       backgroundColor: '#636AE8FF',
       borderRadius: 25,
       height: 40,
-      display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       width: '80%'

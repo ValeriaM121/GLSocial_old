@@ -127,7 +127,6 @@ const styles = StyleSheet.create({
             backgroundColor: '#636AE8FF',
             borderRadius: 25,
             height: 40,
-            display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
         },
@@ -135,7 +134,6 @@ const styles = StyleSheet.create({
             backgroundColor: 'rgb(95, 101, 199)',
             borderRadius: 25,
             height: 40,
-            display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
         }

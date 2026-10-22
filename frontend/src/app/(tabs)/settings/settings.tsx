@@ -23,7 +23,7 @@ export default function Setting(){
 
     const handleLogout = async() =>{
         console.log('clicked');
-        Logout();
+        await Logout();
     }
 
     return(

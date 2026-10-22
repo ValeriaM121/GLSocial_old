@@ -75,7 +75,7 @@ export default function quizContent(){
             <ScrollView contentContainerStyle = {styles.container}>
                 <Text style={{color:"white", fontSize:28, fontWeight: 'bold'}}> May you please choose show you are already watching? Or planning on watching?</Text>
                 <View style={styles.showGrid}>
-                    {showData.map((item, index) => {
+                    {showData.map((item) => {
                         const posterUri = item.posterURL
                             ? `https://image.tmdb.org/t/p/w500${item.posterURL}`
                             : null;
@@ -146,8 +146,9 @@ const styles = StyleSheet.create({
             backgroundColor: '#1E2128FF'
         },
         container:{
-            flexGrow: 1,
-            justifyContent: 'flex-start',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-end',
             flexDirection: 'column',
             gap: 30,
             width: '100%',
@@ -159,9 +160,8 @@ const styles = StyleSheet.create({
             backgroundColor: '#636AE8FF',
             borderRadius: 25,
             height: 45,
-            display: 'flex',
-            alignItems: 'center',
             justifyContent: 'center',
+            alignItems: 'center',
             width: '30%'
         },
         showGrid:{
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
             flexDirection: 'row',
             justifyContent: 'flex-start',
             rowGap: 5,
-            columnGap: 15
+            columnGap: 20
         },
         showCard:{
             width: '30%',
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
             overflow: 'hidden'
         },
         disabledNextButton:{
-            backgroundColor: 'rgb(125, 131, 247)',
+            backgroundColor: 'rgb(144, 150, 255)',
             borderRadius: 25,
             height: 45,
             display: 'flex',

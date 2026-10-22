@@ -11,8 +11,8 @@ export default function RootLayout(){
                 headerShown: false,
                 tabBarStyle:{
                     backgroundColor: '#1E2128FF',
-                    borderTopColor:'transparent',
-                    height: 60
+                    //borderTopColor:'transparent',
+                    height: 80,
                 }
             }}>
                 <Tabs.Screen name="homepage/homepage" options={{title: "", tabBarIcon: () => ( <Ionicons size={24} name="home" color="white"/>)}}/>
